@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/base_zt.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index_zt.css">
+   
+    <style>
+
+
+
+        /*div{
+            width:100px;
+            height: 100px;
+            background-color: rgba(0,0,0.5);
+            -webkit-transition:width 2s ,height 2s,-webkit-transform 2s;
+            transition:width 2s,height 2s,transform 2s;
+        }
+        div:hover{
+            width: 200px;
+            height: 200px;
+            -webkit-transform:rotate(120deg);
+            transform:rotate(120deg);
+        }*/
+    </style>
+</head>
+<body>
+    <!-- 公共头部 -->
+    <div class="header">
+        <div class="shot-cut">
+            <div class="w">
+                <ul class="leftnav fl">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+                <ul class="rightnav fr">
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li id="lis3" class="">
+                        <a href="#" class="myyxk">我的游侠客<span class="icondown"></span></a>
+                        <div id="myyxk" class="hide">
+                            <ul class="fl cleafix">
+                                <li><a href="#">HI~请登录</a></li>
+                                <li><a href="#">我的游记</a></li>
+                                <li><a href="#">我的收藏</a></li>
+                                <li><a href="#">摄影作品</a></li>
+                                <li><a href="#">我的积分</a></li>
+                                <li><a href="#">账号设置</a></li>
+                            </ul>
+                            <ul class="fl clearfix">    
+                                <li><a href="#">我的订单</a></li>
+                                <li><a href="#">个人照片</a></li>
+                                <li><a href="#">我的关注</a></li>
+                                <li><a href="#">我的粉丝</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="c_ph">
+                        <span class="c-phone"></span>
+                        <a href="#" id="">手机app</a>
+                        <img src="images/weima2.png" alt="" id="c_phone" class="hide">
+                        <em class="hide"></em>
+                    </li>
+                    <li><a href="#"><span class="c-weibo"></span></a></li>
+                    <li id="c_weib">
+                        <a href="#" id=""><span class="c-weixin"></span></a>
+                        <img src="images/weibo_code.png" alt="" id="c_wx" class="hide">
+                        <em class="hide"></em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo-box">
+            <div class="w">
+                <div class="logo fl">
+                    <a href="#">
+                        <img src="images/yxk_logo.png" alt="">
+                    </a>
+                </div>
+                <div class="search fl" id="search">
+                    <a href="#" class="fl" id="current_city">北京站<span></span></a>
+                    <!-- 动态创建的下拉菜单 -->
+                    <div id="city" class="hide"></div>
+                    <span class="fl"></span>
+                    <form class="fl" id="s_area">
+                        <input type="text" class="searchtxt"><input type="submit" class="searchbtn" value="搜索">
+                        <span id="acBtn">活动
+                            <div id="active" class="hide"></div>
+                        </span>
+                        <i></i>
+                    </form>
+                </div>
+                <div class="c-call fl"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <div id="navlist" class="w">
+                <ul id="nlist" class="clearfix">
+                    <li><a href="#">首页</a></li>
+                    <li>
+                        <a href="#">周边游</a><span></span><i>中秋满月趴<em></em></i>
+                        <div class="n1 hide">
+                            <a href="#">1日游</a>
+                            <a href="#">2日游</a>
+                            <a href="#">3日游</a>
+                            <a href="#">海岛</a>
+                            <a href="#">漂流</a>
+                            <a href="#">溯溪</a>
+                            <a href="#">古道传奇</a>
+                            <a href="#">中秋满月趴</a>
+                            <a href="#">花岛岛旅游</a>
+                            <a href="#">砚瓦岛</a>
+                            <span class="new-icon n1-icon">NEW<i></i></span>
+                        </div>
+                    </li>
+                    <li><a href="#">当地玩乐</a><span></span>
+                        <div class="n2 hide">
+                            <a href="#">分享会</a>
+                            <a href="#">City Walk</a>
+                            <a href="#">同城会</a>
+                            <a href="#">全球WiFi</a>
+                            <a href="#">旅拍写真</a>
+                            <span class="new-icon n2-icon">NEW<i></i></span>
+                        </div>
+                    </li>
+                    <li><a href="#">国内游</a><span></span>
+                        <div class="n3 hide">
+                            <a href="#">云南</a>
+                            <a href="#">广西</a>
+                            <a href="#">贵州</a>
+                            <a href="#">四川</a>
+                            <a href="#">东北</a>
+                            <a href="#">坝上</a>
+                            <a href="#">新疆</a>
+                            <a href="#">西北</a>
+                            <a href="#">西藏</a>
+                            <a href="#">额济纳</a>
+                            <a href="#">内蒙草原</a>
+                            <a href="#">湖南湖北</a>
+                            <a href="#">秦晋</a>
+                        </div>
+                    </li>
+                    <li><a href="#">出境游</a><span></span>
+                        <div class="n4 hide">
+                            <a href="#">签证</a>
+                            <a href="#">游轮</a>
+                            <a href="#">东南亚</a>
+                            <a href="#">日韩朝</a>
+                            <a href="#">欧洲游</a>
+                            <a href="#">美洲游</a>
+                            <a href="#">中东非</a>
+                            <a href="#">婆罗南亚</a>
+                            <a href="#">全球海岛</a>
+                            <a href="#">极地探险</a>
+                            <span class="new-icon n4-icon">NEW<i></i></span>
+                        </div>
+                    </li>
+                    <li><a href="#">摄影游</a><span></span>
+                        <div class="n5 hide">
+                            <a href="#">摄影作品</a>
+                            <a href="#">摄影路线</a>
+                            <a href="#">比赛专线</a>
+                            <a href="#">摄影赛事</a>
+                            <a href="#">摄影培训</a>
+                            <a href="#">环境人像</a>
+                        </div>
+                    </li>
+                    <li><a href="#">亲子游</a></li>
+                    <li><a href="#">活动赛事</a><span></span><i>腾格里沙漠行<em></em></i>
+                        <div class="n6 hide">
+                            <a href="#">腾格里沙漠毅行</a>
+                            <a href="#">神农架行走体验赛</a>
+                            <a href="#">西山国际登山节</a>
+                            <a href="#">城市坐标</a>
+                            <a href="#">登山节</a>
+                            <span class="new-icon n6-icon">NEW<i></i></span>
+                        </div>
+                    </li>
+                    <li><a href="#">主题游</a><span></span><i>最美秋色<em></em></i>
+                        <div class="n7 hide">
+                            <a href="#">中秋国庆</a>
+                            <a href="#">最美秋色</a>
+                            <a href="#">户外游</a>
+                            <a href="#">瑜伽行</a>
+                            <a href="#">全球徒步</a>
+                            <a href="#">出境海岛</a>
+                            <a href="#">国内海岛</a>
+                            <a href="#">游侠自驾</a>
+                            <a href="#">骑行天下</a>
+                            <a href="#">沙漠旅行</a>
+                            <span class="new-icon n7-icon">NEW<i></i></span>
+                            <span class="new-icon n72-icon">NEW<i></i></span>
+                            <span class="new-icon n73-icon">NEW<i></i></span>
+                        </div>
+                    </li>
+                    <li><a href="#">定制游</a></li>
+                    <li><a href="#">社区</a><span></span>
+                        <div class="n8 hide">
+                            <a href="#">目的地</a>
+                            <a href="#">游侠客攻略</a>
+                            <a href="#">游侠客视频</a>
+                            <a href="#">圈子</a>
+                            <a href="#">游飞侠</a>
+                            <a href="#">咨询</a>
+                            <a href="#">游侠客领队</a>
+                            <a href="#">游侠报道</a>
+                        </div>
+                    </li>
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+            <!-- 内容盒子 -->
+
+            
+        </div>
+    </div>
+
+
+<!-- 轮播图 -->
+<div class="head_pic" id="b_bigbox">
+    <div  class="b_inner">
+        <ul  class="clearfix">
+            <li><img src="images/big01.jpg" alt="" width="1920" height="523"></li>
+            <li><img src="images/big02.png" alt="" width="1920" height="523"></li>
+            <li><img src="images/big03.gif" alt="" width="1920" height="523"></li>
+            <li><img src="images/big04.jpg" alt="" width="1920" height="523"></li>
+            <li><img src="images/banner.jpg" alt="" width="1920" height="523"></li>
+        </ul>
+        <div class="arr">
+            <span class="arrow_left">&lt;</span>
+            <span class="arrow_right">&gt;</span>
+        </div>
+    </div> 
+    
+</div>
+<!-- 类型旅游 -->
+<div class="lx_title">
+    <div class="boder-line boder-top-color"></div>
+    <div class="middle-word theme-color">
+        <span class="word1">类型旅游</span><br>
+        <span class="word2">量身定制+类型丰富</span>
+    </div>
+</div>
+<!-- 类型标签 -->
+<div class="w lx_style">
+    <ul>
+        <li class="lx_color">类型&gt;</li>
+        <li><a href="#">中秋国庆</a></li>
+        <li><a href="#tubu">全球徒步</a></li>
+        <li><a href="#haidao">国内海岛</a></li>
+        <li><a href="#">比赛专线</a></li>
+        <li><a href="#">内蒙草原</a></li>
+        <li><a href="#">古道传奇</a></li>
+    </ul>
+</div>
+<!-- 类型标签结束 -->
+<!-- 类型里的主题 -->
+<div class="w style_pic">
+    <ul>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a href="#">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">中秋国庆</span>
+                <img src="images/17311531990882.jpg" alt="">
+            </a>
+            
+        </li>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a name="tubu">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">全球徒步</span>
+                <img src="images/58be42589c199.jpg" alt="">
+            </a>
+        </li>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a name="haidao">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">国内海岛</span>
+                <img src="images/74741521449325.jpg" alt="">
+            </a>
+        </li>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a href="#">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">比赛专线</span>
+                <img src="images/580596098dbab.jpg" alt="">
+            </a>
+        </li>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a href="#">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">内蒙草原</span>
+                <img src="images/50621521445109.jpg" alt="">
+            </a>
+        </li>
+        <li class="plbig_box">
+            <div class="one"></div>
+            <a href="#">
+                <div class="open">
+                    <span>开启你的旅程</span>
+                </div>
+                <span class="plbox">古道传奇</span>
+                <img src="images/580595ac75147.jpg" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 类型主题结束 -->
+<div class="lx_title3">
+    <div class="boder-line3 boder-top-color3"></div>
+    <div class="middle-word3 theme-color3">
+        <span class="word5">全球徒步</span><br>
+        <span class="word6">徒步圣地大全</span>
+    </div>
+</div>
+<!-- 全球徒步 -->
+<!-- 标题头tab切换 -->
+<div class="tb_box w">
+    <div class="tb_title">
+        <ul class="theme-tab">
+            <li class="active2">亚洲</li>
+            <li>欧洲</li>
+            <li>非洲</li>
+        </ul>
+    </div>
+    <div class="tab">
+        <div class="tabox selected2">
+            <ul>
+                <li class="hideline">
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/tu1.jpg" alt="">
+                        </div>
+                        <div class="text">
+                                <h3>【徒步尼泊尔 • 爆款线路A线】2018众神国度，亚洲国家森林公园独木舟漂流+骑大象+探访原始部落！博卡拉四天徒步看雪山登顶Poon Hill，纳加阔特，世界徒步线路11日全景之旅（两人成行！）</h3>
+                                <span class="price">&yen;<span>5880</span>元起
+                            </span>
+                            <span class="apply">
+                                <span>
+                                    难度:
+                                    <span class="star star9"><img src="images/xing.jpg" alt=""></span>
+                                </span>
+                                <i>加德满都 出发 | 801人已报名</i>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+               
+                
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/tu2.jpg" alt="">
+                        </div>
+                        <div class="text ff">
+                            <h3>
+                                【小众印尼 • 徒步活火山】2018印尼巴厘岛免签！《孤独星球》推荐独一无二的绝世奇景，林贾尼活火山，星辰大海下露营，隐秘在莲花深处的天然温泉，龙目岛圣吉吉白沙滩，6天5晚征服之旅
+                            </h3>
+                            <div class="wrap">
+                                <span class="days">行程天数 : 6天5晚</span>
+                                <span class="look">团期查看</span>
+                            </div>
+                            <div class="stars">
+                                难度:
+                                <span class="star star9"><img src="images/xing2.jpg" alt=""></span>
+                            </div>
+                            <span class="price">
+                                &yen;
+                                <span>5880</span>
+                                元起
+                            </span>
+                            <span class="apply">
+                                <i>144人已报名</i>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/tu3.jpg" alt="">
+                        </div>
+                        <div class="text ff">
+                            <h3>
+                                【徒步香港】10.1确定成行，国庆也人少！：昂坪市集-大澳渔村-麦理浩径-太平山-香港自由行，从自然风光到城市人文的5日玩转香港之旅！（5人缴费成行）
+                            </h3>
+                            <div class="wrap"> 
+                                <span class="days">行程天数 : 6天5晚</span>
+                                <span class="look">团期查看</span>
+                            </div>
+                            <div class="stars">
+                                难度:
+                                <span class="star star4"><img src="images/xing3.jpg" alt=""></span>
+                            </div>
+                            <span class="price">
+                                &yen;<span>2890</span>元起
+                            </span>
+                            <span class="apply">
+                                <i>231人已报名</i>
+                            </span>
+                        </div>
+                    </a>   
+                </li>
+            </ul>
+        </div>
+        <div class="tabox">
+            <ul>
+                <li class="hideline">
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/5a5c0a8d4b88e.jpg" alt="">
+                        </div>
+                        <div class="text">
+                           <h3>
+                            【贝加尔湖 • 蓝冰徒步】2019西伯利亚蓝冰季，团队免签，亲触冰泡冰堆，行走在世界最深湖泊表面，冷冽6日徒步之旅
+                           </h3> 
+                           <span class="price">
+                               <span class="small">核算中</span>
+                           </span>
+                           <span class="apply">
+                               <span>
+                                   难度:
+                                   <span class="star star2"><img src="images/" alt=""></span>
+                               </span>
+                               <i>  北京  出发 | 131人已报名</i>
+                           </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hideline">
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/58dcd42f1f81c.jpg" alt="">
+                        </div>
+                        <div class="text">
+                           <h3>
+                          【静谧北欧】2018 上海出发，深入挪威三大峡湾，登上布道石，一览峡湾风光，北欧四国-芬兰-瑞典-挪威-丹麦12日深度之旅
+                           </h3> 
+                           <span class="price">
+                            &yen;
+                               <span>22770</span>
+                               元起
+                           </span>
+                           <span class="apply">
+                               <span>
+                                   难度:
+                                   <span class="star star2"><img src="images/" alt=""></span>
+                               </span>
+                               <i>  上海  出发 | 221人已报名</i>
+                           </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabox">
+            <ul>
+                <li class="hideline">
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/58cace20a52b9.jpg" alt="">
+                        </div>
+                        <div class="text">
+                           <h3>
+                            【登顶非洲屋脊-坦桑尼亚集合】2018非洲，坦桑尼亚-乞力马扎罗雪山，傲视非洲赤道雪山8日徒步之旅
+                           </h3> 
+                           <span class="price">
+                               <span class="small">核算中</span>
+                           </span>
+                           <span class="apply">
+                               <span>
+                                   难度:
+                                   <span class="star star2"><img src="images/" alt=""></span>
+                               </span>
+                               <i> 坦桑尼亚 出发 | 20人已报名</i>
+                           </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hideline">
+                    <a href="">
+                        <div class="pic">
+                            <img src="images/5aec14db36b28.jpg" alt="">
+                        </div>
+                        <div class="text">
+                           <h3>
+                            【新西兰徒步】南岛经典三条步道，基督城-梯卡坡-瓦纳卡-皇后镇，雪山-湖泊-河流，暗黑星空保护区，10天7晚徒步丈量纯净新西兰
+                           </h3> 
+                           <span class="price">
+                           &yen;
+                               <span>18000</span>
+                               元起
+                           </span>
+                           <span class="apply">
+                               <span>
+                                   难度:
+                                   <span class="star star2"><img src="images/" alt=""></span>
+                               </span>
+                               <i> 广州  出发 | 60人已报名</i>
+                           </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!-- 全球徒步结束 -->
+<!-- 国内海岛 -->
+<div class="lx_title2">
+    <div class="boder-line2 boder-top-color2"></div>
+    <div class="middle-word2 theme-color2">
+        <span class="word3">国内海岛</span><br>
+        <span class="word4">国内海岛路线推荐大全</span>
+    </div>
+</div>
+<!-- 国内海岛地图 -->
+<div class=" haidao_box" id="box">
+    <div class="mapList">
+        <div class="map1 map selected3"></div>
+        <div class="map2 map">
+            <ul>
+                <li class="li1">
+                    <a href="javaScript:;" target="_blank">
+                        南澳岛
+                        <div class="text">
+                            <img src="images/nanao1.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="javaScript:;" target="_blank">
+                        龟龄岛
+                        <div class="text">
+                            <img src="images/guidao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li3">
+                    <a href="javaScript:;" target="_blank">
+                        黑排角
+                        <div class="text">
+                            
+                            <img src="images/heipai.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li4">
+                    <a href=" avaScript:;" target="_blank">
+                        狮子岛
+                        <div class="text">
+                            
+                            <img src="images/shidao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="javaScript:;" target="_blank">
+                        海螺角
+                        <div class="text">
+                            
+                            <img src="images/hailuo.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li6">
+                    <a href="javaScript:;" target="_blank">
+                        小辣甲岛
+                        <div class="text">
+                            
+                            <img src="images/xiaolajia.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li7">
+                    <a href="javaScript:;" target="_blank">
+                        三门岛
+                        <div class="text">
+                            
+                            <img src="images/sanmendao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li8">
+                    <a href="javaScript:;" target="_blank">
+                        东西冲
+                        <div class="text">
+                            
+                            <img src="images/dongxichong.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li9">
+                    <a href="javaScript:;" target="_blank">
+                        塔门
+                        <div class="text">
+                           
+                            <img src="images/tamen.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li10">
+                    <a href="javaScript:;" target="_blank">
+                        海滨栈道
+                        <div class="text">
+                            
+                            <img src="images/haibingzhan.jpg" />
+                        </div>
+                    </a>
+                </li>
+
+                <li class="li11">
+                    <a href="javaScript:;" target="_blank">
+                        麦理浩径
+                        <div class="text">
+                            
+                            <img src="images/maili.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li12">
+                    <a href="javaScript:;" target="_blank">
+                        南丫岛
+                        <div class="text">
+                            
+                            <img src="images/nanyadao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li13">
+                    <a href="javaScript:;" target="_blank">
+                        长洲岛
+                        <div class="text">
+                            <
+                            <img src="images/changzhoudao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li14">
+                    <a href="javaScript:;" target="_blank">
+                        庙湾岛
+                        <div class="text">
+                            
+                            <img src="images/miaowandao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li15">
+                    <a href="javaScript:;" target="_blank">
+                        大澳渔村
+                        <div class="text">
+                            
+                            <img src="images/daaodao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li16">
+                    <a href="javaScript:;" target="_blank">
+                        高栏港
+                        <div class="text">
+                            
+                            <img src="images/gaolangang.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li17">
+                    <a href="javaScript:;" target="_blank">
+                        浪琴湾
+                        <div class="text">
+                            
+                            <img src="images/langqinwan.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li18">
+                    <a href="javaScript:;" target="_blank">
+                        海陵岛
+                        <div class="text">
+                            
+                            <img src="images/hailingdao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li19">
+                    <a href="javaScript:;" target="_blank">
+                        涠洲岛
+                        <div class="text">
+                            
+                            <img src="images/weizhoudao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li20">
+                    <a href="javaScript:;" target="_blank">
+                        北海银滩
+                        <div class="text">
+                            
+                            <img src="images/beihaiyin.jpg" />
+                        </div>
+                    </a>
+                </li>
+
+                <li class="li21">
+                    <a href="javaScript:;" target="_blank">
+                        斜阳岛
+                        <div class="text top">
+                            
+                            <img src="images/xieyangdao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li22">
+                    <a href="javaScript:;" target="_blank">
+                        加井岛
+                        <div class="text top">
+                            
+                            <img src="images/jiajindao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li23">
+                    <a href="javaScript:;" target="_blank">
+                        分界洲岛
+                        <div class="text top">
+                            
+                            <img src="images/fenjiezhoudao1.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li24">
+                    <a href="javaScript:;" target="_blank">
+                        蜈支洲岛
+                        <div class="text top">
+                            
+                            <img src="images/wuzhizhou1.jpg" />
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="map3 map">
+            <ul>
+                <li class="li1">
+                    <a href="javaScript:;" target="_blank">
+                        花鸟岛
+                        <div class="text top">
+                            
+                            <img src="images/huaniaodao1.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="javaScript:;" target="_blank">
+                        枸杞岛
+                        <div class="text top">
+                            
+                            <img src="images/gouqidao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li3">
+                    <a href="javaScript:;" target="_blank">
+                        
+                            嵊泗岛
+                            
+                        <div class="text top">
+                            
+                            <img src="images/chengsidao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li4">
+                    <a href="javaScript:;" target="_blank">
+                        
+                            
+                            衢山岛
+                        <div class="text top">
+                            
+                            <img src="images/qushandao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="javaScript:;" target="_blank">
+                        
+                            
+                            东极岛
+                        <div class="text top">
+                            
+                            <img src="images/dongjidao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li6">
+                    <a href="javaScript:;" target="_blank">
+                        
+                            
+                            普陀山岛
+                        <div class="text top">
+                            
+                            <img src="images/putuoshandao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li7">
+                    <a href="javaScript:;" target="_blank">
+                        
+                            
+                            朱家尖岛
+                        <div class="text top">
+                            
+                            <img src="images/zhujiajian.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li8">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            
+                            松兰山海滨度假区
+                            
+                        <div class="text top">
+                            
+                            <img src="images/songlanshan.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li9">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            
+                            五彩海滨
+                            
+                        <div class="text top">
+                            
+                            <img src="images/wucaibin.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li10">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            
+                            
+                            檀头山岛
+                            
+                            
+                        <div class="text top">
+                            
+                            <img src="images/tantoushan.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li11">
+                    <a href="javaScript:;" target="_blank">
+                    
+                    
+                            渔山岛
+                            
+                        <div class="text top">
+                            
+                            <img src="images/yushandao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li12">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            鹤浦岛
+                            
+                            
+                        <div class="text top">
+                            
+                            <img src="images/hepudao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li13">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            龙湾海滨
+                            
+                            
+                        <div class="text top">
+                            
+                            <img src="images/longwan.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li14">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            大陈岛
+                            
+                        <div class="text top">
+                            
+                            <img src="images/dachendao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li15">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            大门岛
+                            
+                        <div class="text top">
+                            
+                            <img src="images/damendao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li16">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            洞头岛
+                            
+                        <div class="text top">
+                            
+                            <img src="images/dongtou.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li17">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            
+                        南麂岛
+
+                        <div class="text top">
+                            
+                            <img src="images/nanludao.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li18">
+                    <a href="javaScript:;" target="_blank">
+                    
+                            
+                        台山列岛
+
+                        <div class="text top">
+                            
+                            <img src="images/tai.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li19">
+                    <a href="javaScript:;" target="_blank">
+
+                        
+                            大嵛山岛
+                            
+
+                        <div class="text top">
+                            
+                            <img src="images/dayushan.jpg" />
+                        </div>
+                    </a>
+                </li>
+                <li class="li20">
+                    <a href="javaScript:;" target="_blank">
+
+                       
+                            霞浦
+                            
+
+                        <div class="text top">
+                            
+                            <img src="images/xiapu.jpg" />
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="map4 map"></div>
+        <div class="map5 map"></div>
+<!-- 地图切换  -->
+    </div>
+    <div class="hd">
+        <span class="active3">中国地图</span>
+        <span>海南</span>
+        <span>东海</span>
+        <span>黄海</span>
+        <span>渤海</span>
+
+    </div>
+</div>
+<!-- 地图切换结束 -->
+<!-- 国内海岛结束 -->
+
+
+
+
+
+<!-- 底部开始 -->
+<div class="zt_footer1">
+    <div class="w">
+        <div class="fl footer_item1">
+            <dl class="fl">
+                <span></span>
+                <dt>旅游专题</dt>
+                <dd><a href="">游侠宝贝</a></dd>
+                <dd><a href="">国内海岛</a></dd>
+                <dd><a href="">华南旅游</a></dd>
+                <dd><a href="">日韩朝</a></dd>
+                <dd><a href="">澳新游</a></dd>
+                <dd><a href="">极地探险</a></dd>
+            </dl>
+            <dl class="fl">
+                <dd><a href="">春天花事</a></dd>
+                <dd><a href="">出境海岛</a></dd>
+                <dd><a href="">秦晋风云</a></dd>
+                <dd><a href="">欧洲游</a></dd>
+                <dd><a href="">中东非</a></dd>
+                <dd><a href="">全球徒步</a></dd>
+            </dl>
+            <dl class="fl">
+                <dd><a href="">草原行游</a></dd>
+                <dd><a href="">华北旅游</a></dd>
+                <dd><a href="">东南亚</a></dd>
+                <dd><a href="">美洲游</a></dd>
+                <dd><a href="">婆罗南亚</a></dd>
+                <dd><a href="">邮轮游</a></dd>
+            </dl>
+        </div>
+        <div class="fl footer_item2">
+            <dl class="fl">
+                <dt>帮助中心</dt>
+                <dd><a href="">网上报名状态说明</a></dd>
+                <dd><a href="">如何分笔支付</a></dd>
+                <dd><a href="">电子合同下载</a></dd>
+                <dd><a href="">网上报名退出活动</a></dd>
+                <dd><a href="">网上报名费用支付</a></dd>
+            </dl>
+            <dl class="fl">
+                <dd><a href="">纯玩是什么意思？</a></dd>
+                <dd><a href="">单房差是什么？</a></dd>
+                <dd><a href="">双飞、双卧都是什么意思？</a></dd>
+                <dd><a href="">什么是空位费</a>？</dd>
+                <dd><a href="">身份证每个都要填写吗？</a></dd>
+            </dl>
+        </div>
+        <div class="fl footer_item3">
+            <dl>
+                <dt>游侠客APP</dt>
+                <dd>扫描下载游侠客APP</dd>
+                <dd><img src="images/app.jpg" alt=""></dd>
+            </dl>
+        </div>
+    </div>
+</div><div style="clear: both"></div>
+<div class="zt_footer2">
+    <div class="w">
+        <div class="footer2_item1 fl">
+            <dl>
+                <p>责任</p>
+                <div class="rb">
+                    <dd>游侠客提倡负责任的旅行</dd>
+                    <dd>对组织者和参与者都是如此</dd>
+                </div>
+            </dl>
+
+        </div>
+        <div class="footer2_item2 fl">
+            <dl>
+                <p>线路</p>
+                <div class="rb">
+                    <dd>强大专业的策划和组织能力</dd>
+                    <dd>纯净美妙的旅行线路</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="footer2_item3 fl">
+            <dl>
+                <p>服务</p>
+                <div class="rb">
+                    <dd>热忱的服务团队，敬业并</dd>
+                    <dd>富有人格魅力的领队导游
+                </div>
+            </dl>
+        </div>
+        <div class="footer2_item4 fl">
+            <dl>
+                <p>体验</p>
+                <div class="rb">
+                    <dd>边走边玩、一路行摄</dd>
+                    <dd>团队建设，气氛活跃</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="footer2_item5 fl">
+            <dl>
+                <p>生态</p>
+                <div class="rb">
+                    <dd>珍惜环境、尊重风俗</dd>
+                    <dd>注重环保、绿色旅行</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="footer2_item6 fl">
+            <dl>
+                <p>分享</p>
+                <div>
+                    <dd>一次活动大量照片</dd>
+                    <dd>记分享领队负责集体照</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="zt_footer3">
+    <div class="w">
+        <div class="footer3_item1">
+            <ul>
+                <li><img src="images/foot1_03.jpg" alt=""></li>
+                <li><img src="images/foot1_05.jpg" alt=""></li>
+                <li><img src="images/foot1_07.jpg" alt=""></li>
+                <li><img src="images/foot1_09.jpg" alt=""></li>
+                <li><img src="images/foot1_11.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="footer3_item2">
+            <ul class="clearfix">
+                <li>关于游侠客</li>
+                <li>游侠客的故事</li>
+                <li>联系游侠客</li>
+                <li>游侠客招聘</li>
+                <li>意见反馈</li>
+                <li>使用协议</li>
+                <li>隐私政策</li>
+                <li>交换链接</li>
+                <li>帮助中心</li>
+            </ul>
+        </div>
+        <p class="footer3_item3">
+                ICP经营许可证：浙 ICP 备 09011712 号-1 | 营业执照 |    浙江游侠客国际旅行社有限公司   杭州途游电子商务有限公司 许可证编号：L-ZJ-CJ00161
+        </p>
+        <p class="footer3_item4">
+            © 2018 youxiake.com 版权所有 法律顾问：浙江四海方圆律师事务所   傅林放   杭州市旅游投诉电话：0571-96123   投诉及紧急事件联系电话：400-670-6300转5
+        </p>
+        <p class="footer3_item5">
+            24小时旅游预订电话(免长途费)：400-670-6300，华东游预订请按"1"键，国内游预订请按"2"键，投诉建议邮箱：jianyi@youxiake.com
+        </p>
+        <ul class="footer3_item6">
+            <li><img src="images/ext1.jpg" alt=""></li>
+            <li><img src="images/ext2.jpg" alt=""></li>
+            <li><img src="images/ext3.jpg" alt=""></li>
+            <li><img src="images/ext4.jpg" alt=""></li>
+            <li><img src="images/ext5.jpg" alt=""></li>
+            <li><img src="images/ext6.jpg" alt=""></li>
+            <li><img src="images/ext7.jpg" alt=""></li>
+            <li><img src="images/ext9.jpg" alt=""></li>
+        </ul>
+    </div> 
+</div>
+    <!-- 底部结束 -->
+</body>
+</html>
